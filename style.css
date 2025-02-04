@@ -1,13 +1,12 @@
 *{
-    background-color: gray;
-
+    background-color: #121212;
+    font-family: Arial, sans-serif;
     
 }
 
-.header{
+#header{
     display: flex;
-    align-self: center;
-    text-align: center;
+    justify-content: center;
 }
 
 h1{
@@ -16,10 +15,89 @@ h1{
     color: whitesmoke;
 }
 
+#inputs{
+    display: flex;
+    justify-content: center;
+}
+
 ::placeholder{
-    color: whitesmoke;
+    display: flex;
+    background-color: #282828;
+    /* font-size: 2.5em; */
+    margin: auto;
 }
 
 input{
-    color: whitesmoke
+    border: none;
+    font-size: 2.5em;
+}
+
+input, textarea{
+    background-color: #282828;
+}
+
+#tasker{
+    color: whitesmoke;
+    border-radius: 12px;
+    margin-left: 50px;
+    width: 50vw;
+}
+
+ul{
+    font-size: 2.5em;
+    color: white;
+    text-align: left;
+}
+
+li{
+    font-size: .5em;
+    text-decoration: white;
+}
+
+button{
+    background: #ae8dc5;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    border: none;
+    border-radius: 12px;
+    
+    margin: 10px;
+    border-color: #121212;
+}
+
+#AddTo{
+    padding: 20px;
+    font-size: 1.5em;
+    background: #ae8dc5;
+}
+
+
+#container{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-color: solid #575757;
+    
+}
+
+#workinprogress{
+    display: flex;
+    background-color: #121212;
+    text-align: center;
+    padding-bottom: 10em;
+    border-radius: 12px;
+    border: 1px solid #575757;
+
+    width: 33.3%;
+}
+
+#finishedlist{
+    display: flex;
+    background-color: #121212;
+    border-radius: 12px;
+    border: 1px solid #575757;
+
+    width: 33.3%;
+    height: 50vh;
 }

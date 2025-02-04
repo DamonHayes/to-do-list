@@ -49,13 +49,30 @@ function addtoList() {
 function moveToCompleted(finishedTask){
     var taskremove = document.getElementById(finishedTask)
     var finishedList = document.getElementById("flist")
-    
-    
+
     taskremove.removeChild(taskremove.childNodes[1])
+    
+    
+
+    var finishedButton = document.createElement("button")
+    finishedButton.appendChild(document.createTextNode("Delete"))
+    finishedButton.addEventListener("click", function(){deleter(taskremove.id)})
+
+    taskremove.appendChild(finishedButton)
+
     finishedList.appendChild(taskremove)
+
+    
+
 
 
 }
 
 
+function deleter(x){
+    console.log("calling deleter", x)
+    var taskremove = document.getElementById(x)
+    var finishedList = document.getElementById("flist")
 
+    finishedList.removeChild(taskremove)
+}

@@ -7,6 +7,13 @@ var tasklist = document.getElementById("list")
 var buttons = document.getElementById("AddTo")
 buttons.addEventListener("click", function(){addtoList()})
 
+document.querySelector("#tasker").addEventListener('keypress', function(e) {
+    if(e.key == "Enter"){
+        addtoList()
+    }
+
+})
+
 
 
 //function called apon by "add task button"
@@ -23,13 +30,13 @@ function addtoList() {
     var li = document.createElement("li")
     li.appendChild(document.createTextNode(inputs))
 
-    //adds the button on the end of the task to delete "or move to completed"
-    var deleteButton = document.createElement("button")
-    
     //makes the new li have a unique id
     li.id = c
     c += 1
-    deleteButton.appendChild(document.createTextNode("Delete"))
+
+    //adds the button on the end of the task to delete "or move to completed"
+    var deleteButton = document.createElement("button")
+    deleteButton.appendChild(document.createTextNode("Check"))
     deleteButton.addEventListener("click", function(){moveToCompleted(li.id)})
     li.appendChild(deleteButton)
 
@@ -43,7 +50,7 @@ function moveToCompleted(finishedTask){
     var taskremove = document.getElementById(finishedTask)
     var finishedList = document.getElementById("flist")
     
-    console.log(taskremove.childNodes)
+    
     taskremove.removeChild(taskremove.childNodes[1])
     finishedList.appendChild(taskremove)
 

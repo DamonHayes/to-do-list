@@ -13,6 +13,7 @@ h1{
     display: flex;
     text-align: center;
     color: whitesmoke;
+    font-size: 5em;
 }
 
 #inputs{
@@ -52,6 +53,11 @@ ul{
 li{
     font-size: .5em;
     text-decoration: white;
+    margin: 20px;
+}
+
+p{
+    margin: 0px;
 }
 
 button{
@@ -71,6 +77,10 @@ button{
     background: #ae8dc5;
 }
 
+#delbutton{
+    background: url("./images/check.png") top;
+}
+
 
 #container{
     margin-top: 20px;
@@ -85,11 +95,12 @@ button{
     display: flex;
     background-color: #121212;
     text-align: center;
-    padding-bottom: 10em;
+    /* padding-bottom: 10em; */
     border-radius: 12px;
     border: 1px solid #575757;
 
     width: 33.3%;
+    min-height: 50vh;
 }
 
 #finishedlist{
@@ -99,5 +110,5 @@ button{
     border: 1px solid #575757;
 
     width: 33.3%;
-    height: 50vh;
+    
 }
